@@ -20,4 +20,5 @@ steps:
       from_secret: ___
     SONAR_PROJECT_KEY:
       from_secret: ___
+    SONAR_TS_REPORTPATH: ./app/javascript/coverage/lcov.info
 ```
