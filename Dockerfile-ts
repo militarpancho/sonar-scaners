@@ -6,7 +6,6 @@ ARG SONAR_SCANNER_CLI=sonar-scanner-cli-${SONAR_VERSION}
 ARG SONAR_SCANNER=sonar-scanner-${SONAR_VERSION}
 
 RUN apk add --no-cache --update \
-    nodejs \
     npm \
     curl
 
@@ -18,10 +17,8 @@ RUN unzip ${SONAR_SCANNER_CLI}.zip \
     && apk del curl
 
 WORKDIR /src
-RUN npm install -D typescript
-
-
-
+RUN npm install typescript
+ENV NODE_PATH /src/node_modules
 ENV PATH $PATH:/bin/${SONAR_SCANNER}/bin
 
 ENTRYPOINT sonar-scanner \
