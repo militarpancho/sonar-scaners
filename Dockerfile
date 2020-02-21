@@ -21,5 +21,4 @@ ENTRYPOINT sonar-scanner \
   -Dsonar.sources=. \
   -Dsonar.host.url=${SONAR_HOST} \
   -Dsonar.login=${SONAR_TOKEN} \
-  -Dsonar.python.coverage.reportPaths=${SONAR_PY_REPORTPATH} \
   -Dsonar.projectVersion=${COMMIT_VERSION}
