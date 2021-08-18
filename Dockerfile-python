@@ -1,7 +1,5 @@
 FROM militarpancho1/sonar-scanner:latest
 
-RUN apt-get update && apt-get -y install pylint
-
 ENTRYPOINT sonar-scanner \
   -Dsonar.projectKey=${SONAR_PROJECT_KEY} \
   -Dsonar.sources=. \

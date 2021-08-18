@@ -1,5 +1,5 @@
 # Based on: https://github.com/aosapps/drone-sonar-plugin/blob/master/Dockerfile
-FROM openjdk:8-jre-slim
+FROM openjdk:11-jre-slim
 
 ARG SONAR_VERSION=4.2.0.1873
 ARG SONAR_SCANNER_CLI=sonar-scanner-cli-${SONAR_VERSION}
