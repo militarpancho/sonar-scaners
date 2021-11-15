@@ -10,4 +10,4 @@ ENTRYPOINT sonar-scanner \
   -Dsonar.sources=. \
   -Dsonar.host.url=${SONAR_HOST} \
   -Dsonar.login=${SONAR_TOKEN} \
-  -Dsonar.typescript.lcov.reportPaths=${SONAR_TS_REPORTPATH}
+  -Dsonar.javascript.lcov.reportPaths=${SONAR_TS_REPORTPATH}
