@@ -1,6 +1,8 @@
 FROM militarpancho1/sonar-scanner:latest
 
-RUN apt-get update && apt-get install -y npm
+RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
+
+RUN apt-get update && apt-get install -y nodejs
 
 RUN npm install typescript
 ENV NODE_PATH /src/node_modules
